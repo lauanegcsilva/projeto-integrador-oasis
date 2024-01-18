@@ -11,21 +11,19 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 
-
 @Entity
 @Table(name = "tb_categorias")
 public class Categoria {
-    
-    @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	private Long id;
-	
-    @NotNull
-	private String tipo;
-    
-    @UpdateTimestamp
-	private LocalDateTime data;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@NotNull
+	private String tipo;
+
+	@UpdateTimestamp
+	private LocalDateTime data;
 
 	public Long getId() {
 		return id;
